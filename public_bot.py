@@ -13,9 +13,9 @@ if "TOKEN" in os.environ:
 else:
     from config import TOKEN
 
+
 # api_url = 'http://localhost:5000'
 # api_url = 'https://detective-test.herokuapp.com/'
-
 
 
 def start(update, context):
@@ -406,10 +406,8 @@ def search(update, context):
 
 def main():
     print('Connect...')
-    if "TOKEN" in os.environ:
-        updater = Updater(TOKEN, use_context=True)  # , request_kwargs=REQUEST_KWARGS
-    else:
-        updater = Updater(TOKEN, use_context=True)  # , request_kwargs=REQUEST_KWARGS
+
+    updater = Updater(TOKEN, use_context=True)
 
     dp = updater.dispatcher
 
