@@ -7,11 +7,14 @@ from telegram.ext import CallbackContext, CommandHandler, ConversationHandler
 from story_resource import Story
 import os
 import random
+import logging
 
 if "TOKEN" in os.environ:
     TOKEN = os.environ['TOKEN']
 else:
     from config import TOKEN
+
+logging.basicConfig(level=logging.INFO)
 
 
 # api_url = 'http://localhost:5000'
