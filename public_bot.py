@@ -405,6 +405,7 @@ def search(update, context):
 
 
 def main():
+    print('Connect...')
     if "TOKEN" in os.environ:
         updater = Updater(TOKEN, use_context=True)  # , request_kwargs=REQUEST_KWARGS
     else:
@@ -462,4 +463,25 @@ def main():
 
 if __name__ == '__main__':
     db_session.global_init()
+    # session = db_session.create_session()
+    # stories = session.query(Story).all()
+    # session.close()
+    # for i in range(len(stories)):
+    #     print(i)
+    #     story = stories[i].to_dict()
+    #     session = db_session.create_session()
+    #     new = Story(
+    #         id=None,
+    #         title=story['title'],
+    #         text=story['text'],
+    #         answer=story['answer'],
+    #         spectator=story['spectator'],
+    #         opinion=story['opinion'],
+    #         api=story['api'],
+    #         proof=story['proof'],
+    #         api_message=story['api_message'],
+    #         answer_choice=story['answer_choice']
+    #     )
+    #     session.add(new)
+    #     session.commit()
     main()

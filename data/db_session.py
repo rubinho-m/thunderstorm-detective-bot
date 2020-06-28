@@ -20,6 +20,7 @@ def global_init():
 
     if __factory:
         return
+    print('DB...')
 
     if 'DATABASE_URL' in os.environ:
         conn_str = os.environ['DATABASE_URL']  # сработает на Heroku
@@ -39,7 +40,7 @@ def create_session() -> Session:
     # global k
     # k += 1
     # if k != 1:
-    #     bd = 'postgres://kcxclqidxjcndn:b58edf0876605b6ed9b14d32e01bea475fb7c26c769ecd6c5312aeae3367fec0@ec2-35-171-31-33.compute-1.amazonaws.com:5432/deardkh58mhgrk'
+    #     bd = 'postgres://spelerhtvnqcdy:cd889664e63eafb4c4c8145a1dcc8213f65a26b159831e5682245d2df5c24853@ec2-34-233-226-84.compute-1.amazonaws.com:5432/d9j6ilevju4opm'
     #     engine = sa.create_engine(bd, echo=False)
     #     __factory = orm.sessionmaker(bind=engine)
     return __factory()
