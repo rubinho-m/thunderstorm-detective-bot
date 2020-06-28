@@ -460,7 +460,7 @@ def main():
 
 
 if __name__ == '__main__':
-    db_session.global_init()
+    # db_session.global_init()
     # session = db_session.create_session()
     # stories = session.query(Story).all()
     # session.close()
